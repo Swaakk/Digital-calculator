@@ -3,16 +3,18 @@ import './App.css';
 
 function App() {
   const time = new Date().toLocaleTimeString();
-  const[ctime,seyCtime]=useState(time)
+  const[ctime,setCtime]=useState(time)
 
   const UpdateTime=()=>{
-    time = new Date().toLocaleTimeString();
-    seyCtime(time)
+    const time = new Date().toLocaleTimeString();
+    setCtime(time)
   }
+
+  setInterval(UpdateTime,1000)
   return (
     <div className="time-body">
      <h1>{ctime}</h1>
-     <button className="btn" onClick={UpdateTime}>Get Time</button>
+     {/* <button className="btn" onClick={UpdateTime}>Get Time</button> */}
     </div>
   );
 }
