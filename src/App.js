@@ -5,7 +5,7 @@ function App() {
   const time = new Date().toLocaleTimeString();
   const[ctime,seyCtime]=useState(time)
   return (
-    <div >
+    <div className="time-body">
      <h1>{ctime}</h1>
     </div>
   );
